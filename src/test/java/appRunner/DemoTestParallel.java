@@ -20,7 +20,7 @@ import net.masterthought.cucumber.ReportBuilder;
 public class DemoTestParallel {
 	@Test
 	void testParallel() {
-		Results results = Runner.path("classpath:features").tags("@sample").outputCucumberJson(true).parallel(1);
+		Results results = Runner.path("classpath:features").tags("@UI").outputCucumberJson(true).parallel(1);
 //		Results results = Runner.path("classpath:features").outputCucumberJson(true).parallel(0);
 		generateReport(results.getReportDir());
 		assertEquals(0, results.getFailCount(), results.getErrorMessages());
