@@ -3,8 +3,8 @@ Feature: browser automation 2
 
   Background: 
     * configure driver = { type: 'chrome', addOptions: ["--remote-allow-origins=*"] }
+
   # * configure driverTarget = { docker: 'ptrthomas/karate-chrome', showDriverLog: true }
-  
   Scenario: google search, land on the karate github page, and search for a file
     Given driver 'https://google.com'
     And input('textarea[name=q]', 'karate dsl')
