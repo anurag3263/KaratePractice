@@ -1,10 +1,10 @@
 @BrowserFunction
-Feature: Launch Safari browser
+Feature: Web Element Function 2
 
   Background: 
     * configure driver = { type: 'chrome', addOptions: ["--remote-allow-origins=*"] }
 
-  Scenario: Launch safari brwser and login to saucelab
+  Scenario: Web Element function in Karate 2
     Given driver 'https://www.saucedemo.com/'
     * driver.maximize()
   #  * driver.fullscreen()  # this will launch the browser in fullsreen (max possible)
