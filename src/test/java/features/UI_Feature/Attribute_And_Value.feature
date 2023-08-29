@@ -18,8 +18,6 @@ Feature: Attribute and Value Operation
     And delay(3000)
     When def initian_value = value("//*[@placeholder='Your name']")
     Then print initian_value
-    #  And delay(3000)
     And value("//*[@placeholder='Your name']","Anurag")
-    #  And delay(3000)
     Then def new_value = value("//*[@placeholder='Your name']")
     And print new_value
