@@ -1,19 +1,17 @@
 package appRunner;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-import static org.junit.jupiter.api.Assertions.*;
+
 import org.apache.commons.io.FileUtils;
-import org.checkerframework.framework.qual.FromByteCode;
+import org.junit.jupiter.api.Test;
 
 import com.intuit.karate.Results;
 import com.intuit.karate.Runner;
-
-import cucumber.api.java.en.Then;
-
-import org.junit.jupiter.api.Test;
 
 import net.masterthought.cucumber.Configuration;
 import net.masterthought.cucumber.ReportBuilder;
@@ -36,7 +34,7 @@ public class DemoTestParallel {
 
 	@Test
 	void testParallel() {
-		Results results = Runner.path("classpath:features").tags("@SetValue").outputCucumberJson(true).parallel(1);
+		Results results = Runner.path("classpath:features").tags("@Login11").outputCucumberJson(true).parallel(1);
 //		Results results = Runner.path("classpath:features").outputCucumberJson(true).parallel(0);
 		generateReport(results.getReportDir());
 		assertEquals(0, results.getFailCount(), results.getErrorMessages());
