@@ -11,6 +11,7 @@ Feature: Login feature using POM page
     #* waitForText("//*[text()='Login']", "Login")
     * def readLogin = Java.type('pomPages.LoginMethod')
     * def results = readLogin.loginRetro('username','password')
-    * waitForText("//*[contains(@class,'alert-content-text')]", "Invalid credentials")
+    And waitUntil('body','Invalid credentials')
+    * waitForText("//*[contains(@class,'alert-content-text')]", 'Invalid credentials')
     * def text = text("//*[contains(@class,'alert-content-text')]")
     * print text

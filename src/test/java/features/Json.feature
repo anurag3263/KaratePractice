@@ -1,4 +1,4 @@
-@sample
+@sample1
 Feature: Json Reader
 
   Scenario: JSON Reader / Parser
