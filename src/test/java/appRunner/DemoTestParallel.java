@@ -34,7 +34,7 @@ public class DemoTestParallel {
 
 	@Test
 	void testParallel() {
-		Results results = Runner.path("classpath:features").tags("@callable").outputCucumberJson(true).parallel(1);
+		Results results = Runner.path("classpath:features").tags("@conduit").outputCucumberJson(true).parallel(1);
 //		Results results = Runner.path("classpath:features").outputCucumberJson(true).parallel(0);
 		generateReport(results.getReportDir());
 		assertEquals(0, results.getFailCount(), results.getErrorMessages());
