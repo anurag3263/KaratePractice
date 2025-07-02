@@ -19,7 +19,7 @@ import net.masterthought.cucumber.ReportBuilder;
 /**
  * @author anuragchaturvedi
  */
-public class DemoTestParallel {
+public class DemoParallelTest {
 
 	/**
 	 * To run Then test From command line use below command where -Dtest= classname
@@ -42,7 +42,7 @@ public class DemoTestParallel {
 
 	public static void generateReport(String karateOutputPath) {
 		Collection<File> jsonFiles = FileUtils.listFiles(new File(karateOutputPath), new String[] { "json" }, true);
-		List<String> jsonPaths = new ArrayList(jsonFiles.size());
+		List<String> jsonPaths = new ArrayList<>(jsonFiles.size());
 		jsonFiles.forEach(file -> jsonPaths.add(file.getAbsolutePath()));
 		Configuration config = new Configuration(new File("target"), "Anurag Karate Report");
 		ReportBuilder reportBuilder = new ReportBuilder(jsonPaths, config);
